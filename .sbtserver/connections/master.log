@@ -1,0 +1,31 @@
+New log file opened at Thu May 26 10:49:15 EDT 2016 by 89834@lits-dgrant
+Taking next connection to: 50110
+New client attempting to connect on port: 50111-50110
+  Address = /10.40.0.219:50110
+This client on port 50111 has uuid 1e3e8c1d-01cd-4e76-bfa5-e59f858e353a configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-1e3e8c1d-01cd-4e76-bfa5-e59f858e353a
+Taking next connection to: 50110
+New client attempting to connect on port: 50174-50110
+  Address = /10.40.0.219:50110
+Handshake exception on socket: 50174
+sbt.impl.ipc.HandshakeException: Unable to perform handshake
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:46)
+	at sbt.impl.ipc.MultiClientServer.<init>(IPC.scala:150)
+	at sbt.server.SbtServerSocketHandler$$anon$1.run(SbtServerSocketHandler.scala:43)
+Caused by: java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at sbt.impl.ipc.Peer.receive(IPC.scala:95)
+	at sbt.impl.ipc.Peer.handshake(IPC.scala:49)
+	... 2 more
+Taking next connection to: 50110
+New client attempting to connect on port: 50175-50110
+  Address = /10.40.0.219:50110
+This client on port 50175 has uuid 896013a1-29c2-48da-8316-1ce0222b1e67 configName play-fork-run humanReadableName Play Fork Run protocolVersion 1 featureTags Vector()
+Connected Clients: play-fork-run-1e3e8c1d-01cd-4e76-bfa5-e59f858e353a, play-fork-run-896013a1-29c2-48da-8316-1ce0222b1e67
+Taking next connection to: 50110
+Checking to see if clients are empty...
+No non-daemon clients connected after 3 min. Shutting down.
+Server socket thread exiting.
+0 clients open, will close them...
+All client sockets have been closed.
+Closing the 89834@lits-dgrant logs at Thu May 26 10:53:19 EDT 2016, goodbye.
