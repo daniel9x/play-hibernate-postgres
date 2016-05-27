@@ -11,7 +11,7 @@ public class Person {
 	@SequenceGenerator(name="personSeq", sequenceName="sq_person", allocationSize=1)
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator="personSeq")
 	@Column(name = "ID", nullable = false)
-	private Integer id;
+	private Long id;
 	
 	@NotNull
     @Size(min = 1, max = 25)
@@ -27,7 +27,7 @@ public class Person {
 		this.name = name;
 	}
 	
-	public Integer getId() {
+	public Long getId() {
 		return id;
 	}
 

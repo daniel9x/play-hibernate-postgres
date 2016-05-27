@@ -1,8 +1,10 @@
 GET     /                           controllers.HomeController.index
 
-POST	/							@controllers.HomeController.addPerson
+POST	/addPerson					@controllers.HomeController.addPerson
 
-GET		/persons					controllers.HomeController.getPersons
+GET		/persons				    controllers.HomeController.getPersons
+
+GET		/persons/:id				controllers.HomeController.getPersonById(id: Long)
 
 GET		/welcomePage				controllers.HomeController.welcome
 

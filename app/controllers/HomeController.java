@@ -36,7 +36,6 @@ public class HomeController extends Controller {
     
     @Transactional
     public Result addPerson() {
-    	
     	EntityManager em = api.em();
     	Person person = new Person(formFactory.form().bindFromRequest().get("name"));
     	em.persist(person);
@@ -45,10 +44,17 @@ public class HomeController extends Controller {
     
     @Transactional
     public Result getPersons() {
-    	
     	EntityManager em = api.em();
+    	String query = "select p from Person p ";
     	List<Person> persons = em.createQuery("select p from Person p", Person.class).getResultList();
     	return ok(Json.toJson(persons));
+    }
+    
+    @Transactional
+    public Result getPersonById(Long id) {
+    	EntityManager em = api.em();
+    	Person person = em.find(Person.class, id);
+    	return ok(Json.toJson(person));
     }
  
 }
