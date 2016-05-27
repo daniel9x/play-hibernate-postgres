@@ -1,9 +1,11 @@
 logs
-target
+/target
 /.idea
 /.idea_modules
 /.classpath
 /.project
+/project
 /.settings
 /RUNNING_PID
 *.class
+.cache-main
