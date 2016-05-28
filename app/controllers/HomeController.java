@@ -30,10 +30,6 @@ public class HomeController extends Controller {
         return ok(index.render("Favorite People"));
     }
     
-    public Result welcome() {
-    	return ok(welcomePage.render("Your new application is ready."));
-    }
-    
     @Transactional
     public Result addPerson() {
     	EntityManager em = api.em();

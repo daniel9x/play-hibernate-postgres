@@ -6,6 +6,4 @@ GET		/persons				    controllers.HomeController.getPersons
 
 GET		/persons/:id				controllers.HomeController.getPersonById(id: Long)
 
-GET		/welcomePage				controllers.HomeController.welcome
-
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
