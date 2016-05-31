@@ -8,5 +8,6 @@ Versions Used:
 - PostgreSQL 9.6 Beta1
 - Hibernate 5.1.0
 - PostgreSQL JDBC Driver 9.4.1208.jre7
+- AngularJS 1.2
 
 This was based off the intro tutorial found here: https://www.youtube.com/watch?v=bLrmnjPQsZc
