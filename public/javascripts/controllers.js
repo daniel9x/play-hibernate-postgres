@@ -1,6 +1,8 @@
 var app = angular.module('myApp', ['ngResource']);
 
 app.controller('PersonsCtrl', function($scope, $http, Persons) {
+	
+	$scope.selectedPersonId = null;
 
 	$scope.refresh = function() {
 		console.log("Refresh!");
@@ -14,6 +16,12 @@ app.controller('PersonsCtrl', function($scope, $http, Persons) {
 		console.log($scope.person.name);
 		$http.post("/",$scope.person.name);
 	}
+	
+	$scope.setSelected = function (personId) {
+    	$scope.selectedPersonId = personId;
+    	$scope.successMessages = [ $scope.selectedPersonId ];
+    }
+	
 });
 
 app.factory('Persons', function($resource){

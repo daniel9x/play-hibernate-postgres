@@ -1,0 +1,7 @@
+.table-striped > tbody > tr.selected,
+.table-striped > tbody > tr.selected:nth-child(odd) > td,
+.table-striped > tbody > tr.selected:nth-child(odd) > th {
+  background-color: blue;
+  color: white;
+  font-weight:bold;
+}
